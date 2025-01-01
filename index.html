@@ -1,1 +1,574 @@
-while(1)
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Adittya Chowdhury Joy - Portfolio</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4fc; /* Light background */
+  color: #333; /* Neutral text color */
+}
+.navbar {
+  position: sticky; /* Makes the navbar stick to the top */
+  top: 0; /* Sticks it at the very top */
+  z-index: 1000; /* Ensures it stays above other content */
+  display: flex;
+  justify-content: space-between; /* Keeps the button and links aligned */
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #6c5ce7; /* Replace with your preferred background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect */
+}
+
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #ff8c42; /* Accent hover */
+}
+
+.resume-button {
+  left: 85px;
+  width: 160px;
+  height: auto;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #ec9843; /* Orange button */
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resume-button:hover {
+  background-color: #f99b4d; /* Darker orange */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #6c63ff; /* Purple heading */
+  text-align: center;
+}
+
+.item {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #6c63ff; /* Purple subheadings */
+}
+
+.item p,
+.item a {
+  font-size: 1rem;
+  color: #555;
+}
+
+.item a {
+  text-decoration: none;
+  color: #6c63ff;
+}
+
+.item a:hover {
+  color: #ff8c42;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill {
+  background-color: #6c63ff; /* Purple */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+  width: 120px; /* Consistent box size */
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Adjust spacing between Email and LinkedIn */
+  text-align: center;
+}
+
+.contact-item p {
+  margin: 12;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6c63ff;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #6c63ff; /* Purple footer */
+  color: #fff;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center; /* Center the content horizontally */
+}
+
+.about img {
+  width: 290px;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+  border: 2px solid #0233fa; /* Add a border to the image */
+}
+
+.about-content {
+  max-width: 600px; /* Limit the width of the description */
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  color: #6c63ff; /* Purple heading color */
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555; /* Neutral text color */
+}
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* Increased spacing between boxes */
+  justify-content: center; /* Center-align the boxes */
+}
+
+.skill {
+  background-color: #6c63ff; /* Updated to a more vibrant color */
+  color: #fff;
+  padding: 2rem; /* Increased padding for larger boxes */
+  border-radius: 10px; /* Smooth corners */
+  text-align: center; /* Center-align text within the box */
+  flex: 1 1 calc(25% - 2rem); /* Responsive size with 4 boxes per row */
+  min-width: 250px; /* Ensure minimum size */
+  max-width: 300px; /* Limit maximum size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for a 3D effect */
+}
+
+.skill h2 {
+  font-size: 1.5rem; /* Larger heading font */
+  margin-bottom: 1rem;
+}
+
+.skill p {
+  font-size: 1rem; /* Adjusted font size for readability */
+  line-height: 1.6;
+}
+
+.skills-list .skill:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  gap: 4rem; /* Adjust spacing between Email and LinkedIn */
+  text-align: center;
+  padding: 2rem; /* Add padding for better spacing */
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6c63ff; /* Updated color for a vibrant look */
+}
+
+.contact-item a {
+  color: #032430; /* Ensure the link is visible and clickable */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: #7e77ff; /* Slightly lighter blue on hover */
+}
+
+.section.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack title and container */
+  padding: 2rem 0; /* Add vertical spacing */
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem; /* Adjust spacing between Email and LinkedIn */
+  text-align: center;
+  margin-top: 2rem; /* Add spacing from the title */
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #6c63ff; /* Matching the title color */
+}
+
+.contact-item a {
+  color: #333; /* Subtle, professional link color */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: #6c63ff; /* Highlight on hover */
+}
+
+.section.contact {
+  text-align: center; /* Ensure section title is centered */
+  margin-bottom: 2rem;
+}
+
+.section.projects {
+  background-color: #f9f9ff; /* Light background for contrast */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section.projects .section-title {
+  color: #6c63ff; /* Consistent with the other section titles */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  color: #6c63ff; /* Highlight project titles */
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  color: #333; /* Readable color for descriptions */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+  gap: 1.5rem; /* Add space between links */
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Keeps the button and links aligned */
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #6c5ce7; /* Replace with your preferred background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-links">
+      <!-- <a href="#">Adittya</a> -->
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#awards">Awards</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="resume-button" onclick="window.open('https://drive.google.com/file/d/1ojm057KNsoR4FA5RRVNH8iLlKt2cpbt7/view?usp=sharing', '_blank')">Download Resume</button>
+  </nav>
+
+  <div class="container">
+    <section id="about" class="section about">
+      <img src="photo_2025-01-01_16-52-17.jpg" alt="Adittya Chowdhury Joy">
+      <div class="about-content">
+        <h2>About Me</h2>
+        <p>
+          I like to solve challenges and I've always been interested in the answers to significant queries. Connecting theoretical knowledge with real-world engineering, particularly in research and development, is my goal. Maintaining emphasis on important goals while cultivating a positive and approachable professional image is my aim. To succeed in my work, I always work to hone my abilities and originality.
+        </p>
+      </div>
+    </section>
+    
+
+    <section id="education" class="section education">
+      <h2 class="section-title">Education</h2>
+      <div class="item">
+        <h3>MASTER’S THESIS IN RENEWABLE ENERGY</h3>
+        <p> University of Agder, Grimstad, Norway  </p>
+        <a href="Websitehttps://www.uia.no/">Website: University of Agder </a>
+      </div>
+      <div class="item">
+        <h3>MASTER OF SCIENCE IN MECHANICAL ENGINEERING</h3>
+        <p> Chittagong University of Engineering and Technology, Chattogram, Bangladesh</p>
+        <a href="https://cuet.ac.bd/ ">Website:CUET</a>
+      </div>
+      <div class="item">
+        <h3>BSc in Mechanical Engineering</h3>
+        <p>Chittagong University of Engineering and Technology, Chattogram, Bangladesh </p>
+        <a href="https://cuet.ac.bd/ ">Website:CUET</a>
+      </div>
+      <div class="item">
+        <h3>HSC in Science</h3>
+        <p>Chittagong College, Chattogram, Bangladesh</p>
+        <a href="https://ctgcollege.gov.bd/">Website:CUET</a>
+      </div>
+      <div class="item">
+        <h3>SSC in Science</h3>
+        <p>Chittagong Collegiate School, Chattogram, Bangladesh</p>
+        <a href="https://ctgcs.edu.bd/">Website:CUET</a>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience">
+      <h2 class="section-title">Experience</h2>
+<div class="item">
+  <h3>Engineer</h3>
+  <p>BSRM Steels Limited, Bangladesh, Chattogram, Bangladesh</p>
+  <ol style="list-style: decimal; padding-left: 1.5rem;">
+    <li>Development of commissioning plans</li>
+    <li>Review and modify design documents supplied by Danieli</li>
+    <li>Inspection and testing of installed systems</li>
+    <li>Verification of system performance</li>
+    <li>Oversee engineering activities, including task scheduling, staff management, and progress monitoring</li>
+    <li>Provide technical support to the production section</li>
+    <li>Manage the workshop's inventory of spare parts and materials</li>
+  </ol>
+</div>
+
+<div class="item">
+  <h3>Engineer Intern</h3>
+  <p>Karnaphuli Fertilizer Company Limited (KAFCO), Chattogram, Bangladesh</p>
+  <ol style="list-style: decimal; padding-left: 1.5rem;">
+    <li>Performed scheduled operations in ammonia plant maintenance</li>
+    <li>Performed scheduled operations in urea plant maintenance</li>
+    <li>Performed scheduled operations in urea granulation plant maintenance</li>
+    <li>Conducted rotary maintenance and condition monitoring</li>
+    <li>Handled product handling and shipment</li>
+  </ol>
+</div>
+
+<div class="item">
+  <h3>Industrial Trainee</h3>
+  <p>Pragoti Industries Limited, Chattogram, Bangladesh</p>
+  <ol style="list-style: decimal; padding-left: 1.5rem;">
+    <li>Got familiar with the car manufacturing process</li>
+    <li>Learned the car assembly line workflow</li>
+    <li>Studied automobile anatomy</li>
+    <li>Learned various manufacturing techniques</li>
+  </ol>
+</div>
+
+<div class="item">
+  <h3>Member Representative</h3>
+  <p>Student Regional Team – Asia Pacific, American Society of Mechanical Engineers</p>
+  <ol style="list-style: decimal; padding-left: 1.5rem;">
+    <li>Contributed to the publication of an E-magazine</li>
+    <li>Worked for 2 months collecting and processing writings from students worldwide</li>
+  </ol>
+ 
+</div>
+
+
+      <section id="awards" class="section awards">
+        <h2 class="section-title">Awards and Honours</h2>
+        <div class="item">
+          <span>
+            <h3>NORPART Scholarship</h3>
+            <p>University of Agder, 2024</p>
+            <p>UiA-CUET CARE Project in 2024</p>
+          </span>
+        </div>
+        <div class="item">
+          <span>
+            <h3>Champion</h3>
+            <p>Robo Mechatronics Association, TECH DAY 2019</p>
+            <p>Champion in Remote Controlled Car Mud Race Competition organized by Robo Mechatronics Association at TECH DAY 2019.</p>
+          </span>
+        </div>
+        <div class="item">
+          <span>
+            <h3>Best Organizer</h3>
+            <p>Supply Chain & Business Alliance, CUET</p>
+            <p>Best Organizer in the National Supply Chain Case Competition</p>
+          </span>
+        </div>
+      </section>
+      
+ 
+
+    <section id="awards" class="section awards">
+      <h2 class="section-title">Awards and Honours</h2>
+      <div class="item">
+        <h3>NORPART Scholarship</h3><p>University of Agder, 2024</p>
+        <p>UiA-CUET CARE Project in 2024</p>
+        
+      </div>
+      <div class="item">
+        <h3>Champion</h3>
+        
+        <p>Robo Mechatronics Association, TECH DAY 2019</p>
+        <p>Champion in Remote Controlled Car Mud Race Competition organized by Robo Mechatronics Association at TECH DAY 2019.</p>
+      </div>
+   
+      <div class="item">
+      <span>  <h3>Best Organizer</h3>
+        
+        <p> Supply Chain & Business Alliance, CUET </p>
+        <p>Best Organizer in the National Supply Chain Case Competition </p>
+      </div></span>
+      <!-- Additional awards go here -->
+    </section>
+
+    <section id="skills" class="section skills">
+      <h2 class="section-title">Management and Leadership Skills</h2>
+      <div class="skills-list">
+        <div class="skill">
+          <h2>Member, Space Frame, Align Racing Norway</h2>
+          <p>Designed 3D modeling of the harness attachment points and placed them in the space frame main assembly to get the final model ready.</p>
+        </div>
+        <div class="skill">
+          <h2>Co-founder, Platform of Bangladesh - An Online Education Platform</h2>
+          <p>Designed class modules and made presentations and videos for 35 classes and workshops, increasing our click-through rate by 12%.</p>
+        </div>
+        <div class="skill">
+          <h2>Organizing Secretary, Supply Chain & Business Alliance, CUET</h2>
+          <p>Arranged a national case competition, “Bizminer 1.0,” by creating a problem situation for an E-commerce company with 300 participants from 31 universities.</p>
+        </div>
+        <div class="skill">
+          <h2>Finance Secretary, Robo Mechatronics Association (RMA)</h2>
+          <p>Arranged a national case competition, “Bizminer 1.0,” by creating a problem situation for an E-commerce company with 300 participants from 31 universities.</p>
+        </div>
+        <div class="skill">
+          <h2>Publication Secretary, CUET Automotive and Mobility Society</h2>
+          <p>Prioritized knowledge and tasks to junior batches by arranging a 4-day workshop for “Bijoy-71,” a Formula One racing car project, and published basics of automobiles through social media.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+  <h2 class="section-title">Projects</h2>
+  <div class="projects-list">
+    <div class="project-card">
+      <h3>Master's Project & Thesis</h3>
+      <p>
+        Entitled “Design, preparation, and characterization of materials for CO reduction to value-added chemicals:
+        An experimental investigation.” The purpose of the thesis is to tailor catalysts for enhanced activity and selectivity
+        toward multiple valuable chemicals.
+      </p>
+    </div>
+    <div class="project-card">
+      <h3>Bachelor's Project & Thesis</h3>
+      <p>
+        Entitled “Design and fabrication of an IoT-based smart water flow control and condition monitoring system.”
+        The purpose of the project is to detect leakage or pipe burst when there is a sudden drop in water flow and to control
+        the flow rate of water remotely by a mobile application or server.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section contact">
+  <h2 class="section-title">Contact Me</h2>
+  <div class="contact-container">
+    <div class="contact-item">
+      <p>Email:</p>
+      <a href="mailto:adittyachowdhuryjoy@gmail.com">adittyachowdhuryjoy@gmail.com</a>
+    </div>
+    <div class="contact-item">
+      <p>LinkedIn:</p>
+      <a href="https://www.linkedin.com/in/adittyachowdhuryjoy/" target="_blank">View Profile</a>
+    </div>
+  </div>
+</section>
+
+    
+      
+</section>
+
+  </div>
+
+  <footer>
+    <p>Built by Adittya Chowdhury Joy © 2024</p>
+  </footer>
+</body>
+
+</html>
