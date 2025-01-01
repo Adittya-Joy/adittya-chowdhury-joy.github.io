@@ -3,7 +3,7 @@
 This is my personal portfolio website showcasing my education, experience, skills, projects, and contact information. The site is built using **HTML** and **CSS** and hosted on **GitHub Pages**.
 
 ## 🌐 Website Link
-[Visit My Portfolio](https://adittya-chowdhury-joy.github.io)
+[Visit My Portfolio](https://adittya-joy.github.io/adittya-chowdhury-joy.github.io/)
 
 ---
 
@@ -15,13 +15,6 @@ This is my personal portfolio website showcasing my education, experience, skill
 - **Skills**: Highlights technical and leadership skills.
 - **Projects**: Displays key projects with descriptions and supervisors.
 - **Contact Section**: Email and LinkedIn for easy connection.
-
----
-
-## 📂 File Structure
-- **index.html**: Main HTML structure of the portfolio.
-- **style.css**: CSS file for styling.
-- **photo.jpg**: Profile picture for the About Me section.
 
 ---
 
